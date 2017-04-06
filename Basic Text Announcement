@@ -1,0 +1,33 @@
+from sense_hat import SenseHat
+import time
+
+s = SenseHat()
+s.low_light = True
+
+green = (0, 255, 0)
+yellow = (255, 255, 0)
+blue = (0, 0, 255)
+red = (255, 0, 0)
+white = (255,255,255)
+nothing = (0,0,0)
+pink = (255,105, 180)
+webText = ("Teachers please check email")
+def White():
+    w= white
+    logo = [
+    w, w, w, w, w, w, w, w,
+    w, w, w, w, w, w, w, w,
+    w, w, w, w, w, w, w, w,
+    w, w, w, w, w, w, w, w,
+    w, w, w, w, w, w, w, w,
+    w, w, w, w, w, w, w, w,
+    w, w, w, w, w, w, w, w,
+    w, w, w, w, w, w, w, w,
+    ]
+    return logo
+    
+s.set_pixels(White())
+time.sleep(3)
+s.show_message(webText, text_colour = [255,0,0], back_colour [255, 255, 255])
+      
+
